@@ -15,8 +15,9 @@
 		0D4BC325248BC2C80040C103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D4BC324248BC2C80040C103 /* Assets.xcassets */; };
 		0D4BC328248BC2C80040C103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4BC326248BC2C80040C103 /* LaunchScreen.storyboard */; };
 		0D4BC330248BC31D0040C103 /* AddPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4BC32F248BC31D0040C103 /* AddPeopleViewController.swift */; };
+		0DB88E56248D6992008CEFDF /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB88E55248D6992008CEFDF /* ContactsViewController.swift */; };
 		0DDADD0A248BDE99006A91F0 /* Cooridnates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDADD09248BDE99006A91F0 /* Cooridnates.swift */; };
-		D36AC73A034D5CC4CD5D5FDB /* libPods-Alert!.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD430BD6CF433FBB697F16B /* libPods-Alert!.a */; };
+		7EA2DA4AF0EB7F8B707D71B0 /* libPods-Alert!.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B356781EA16351671CDB37 /* libPods-Alert!.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +31,10 @@
 		0D4BC327248BC2C80040C103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D4BC329248BC2C80040C103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D4BC32F248BC31D0040C103 /* AddPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPeopleViewController.swift; sourceTree = "<group>"; };
+		0DB88E55248D6992008CEFDF /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		0DDADD09248BDE99006A91F0 /* Cooridnates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cooridnates.swift; sourceTree = "<group>"; };
 		18C64446D965427AD85C5781 /* Pods-Alert!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alert!.release.xcconfig"; path = "Target Support Files/Pods-Alert!/Pods-Alert!.release.xcconfig"; sourceTree = "<group>"; };
-		AAD430BD6CF433FBB697F16B /* libPods-Alert!.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Alert!.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B356781EA16351671CDB37 /* libPods-Alert!.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Alert!.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D517D831C587B7FCE5936142 /* Pods-Alert!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alert!.debug.xcconfig"; path = "Target Support Files/Pods-Alert!/Pods-Alert!.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36AC73A034D5CC4CD5D5FDB /* libPods-Alert!.a in Frameworks */,
+				7EA2DA4AF0EB7F8B707D71B0 /* libPods-Alert!.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +106,7 @@
 			children = (
 				0D4BC31F248BC2C70040C103 /* ViewController.swift */,
 				0D4BC32F248BC31D0040C103 /* AddPeopleViewController.swift */,
+				0DB88E55248D6992008CEFDF /* ContactsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,7 +122,7 @@
 		7BB0F9B2D57BC328C5204FFC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AAD430BD6CF433FBB697F16B /* libPods-Alert!.a */,
+				33B356781EA16351671CDB37 /* libPods-Alert!.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D4BC320248BC2C70040C103 /* ViewController.swift in Sources */,
+				0DB88E56248D6992008CEFDF /* ContactsViewController.swift in Sources */,
 				0D2612E2248BC810000FFEF4 /* SendMessage.swift in Sources */,
 				0D4BC330248BC31D0040C103 /* AddPeopleViewController.swift in Sources */,
 				0D4BC31C248BC2C70040C103 /* AppDelegate.swift in Sources */,

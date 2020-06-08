@@ -17,9 +17,13 @@ class SendMessage{
     func getNums(){
         contacts = realm.objects(SaveNumber.self)
         if let nums = contacts{
-            for i in Range(0...nums.count-1){
-                numbers.append(nums[i].number)
+            if nums.count != 0{
+                for i in Range(0...nums.count-1){
+                    numbers.append(nums[i].number)
+                }
             }
+        }else{
+            print("Add a contact first")
         }
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MessageUI
 
-class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
+class ViewController: UIViewController, MFMessageComposeViewControllerDelegate{
     
     
     @IBOutlet weak var addPeople: UIBarButtonItem!
@@ -18,6 +18,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     var sendmessage = SendMessage()
     let locationManager = CLLocationManager()
     var coordinates = Coordinates()
+    
     
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         controller.dismiss(animated: true, completion: nil)
@@ -29,6 +30,7 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        
         
     }
     
@@ -49,8 +51,8 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
             let composeVC = MFMessageComposeViewController()
             composeVC.messageComposeDelegate = self
             composeVC.recipients = sendmessage.numbers
-            composeVC.body = "Help! I'm in danger, my location - latitude: \(latitude), longitude: \(longitude)"
-            print("Help! I'm in danger, my location - latitude: \(latitude), longitude: \(longitude)")
+            composeVC.body = "Help! I'm in danger, my location - latitude: \(latitude), longitude: \(longitude), Address: \(coordinates.message)"
+            print("Help! I'm in danger, my location - latitude: \(latitude), longitude: \(longitude), Address: \(coordinates.message)")
             if MFMessageComposeViewController.canSendText(){
                 self.present(composeVC, animated: true, completion: nil)
             }else{
@@ -76,6 +78,7 @@ extension ViewController: CLLocationManagerDelegate{
             let lon = location.coordinate.longitude
             locationManager.stopUpdatingLocation()
             coordinates.getCoords(lats: lat, longs: lon)
+            coordinates.getAddress(lat: lat, lon: lon)
             
             
             

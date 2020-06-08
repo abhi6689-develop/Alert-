@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class AddPeopleViewController: UIViewController {
+class AddPeopleViewController: UIViewController, UITextFieldDelegate  {
 
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var nameField: UITextField!
@@ -19,11 +19,11 @@ class AddPeopleViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.addButton.layer.cornerRadius = 30
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupHideKeyboardOnTap()
-
     }
     @IBAction func AddButtonPressed(_ sender: Any) {
         if let name = self.nameField.text, let number = self.phoneField.text{
